@@ -1,8 +1,10 @@
 <div align="center">
 
-<img src="assets/header.gif" alt="Gizedin Al Qorni Gunawan" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=12,20,24&height=240&section=header&text=Gizedin%20Al%20Qorni%20Gunawan&fontSize=42&fontColor=ffffff&animation=twinkling&fontAlignY=38&desc=Backend%20Developer%20%7C%20Founder%20of%20MZ%20DevWorks&descSize=20&descAlignY=60" alt="header" width="100%"/>
 
-<br/>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&pause=800&color=58A6FF&center=true&vCenter=true&width=800&height=50&lines=Backend+Developer;PHP+%7C+Laravel+%7C+MySQL;Founder+of+MZ+DevWorks;Building+Websites%2C+Systems+%26+Applications;Learning+Supabase+%26+Vercel" alt="typing"/>
+
+<br/><br/>
 
 <a href="https://www.linkedin.com/in/gizedin-al-qorni-gunawan-27129b343"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" height="45"/></a>
 <a href="https://gizedin.netlify.app/"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=netlify&logoColor=00C7B7" alt="Portfolio" height="45"/></a>
@@ -14,7 +16,7 @@
 
 </div>
 
-<img src="assets/divider.gif" width="100%" alt=""/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,20,24&height=4" width="100%" alt=""/>
 
 ## About Me
 
@@ -23,11 +25,7 @@
 - On the front end, I have a basic understanding of **Bootstrap, Tailwind CSS, and React JS**.
 - I am currently exploring **Supabase** and **Vercel** as experiments, while my main projects are built with **Laravel and MySQL**.
 
-<div align="center">
-<img src="assets/terminal.gif" alt="Terminal animation" width="100%"/>
-</div>
-
-<img src="assets/divider.gif" width="100%" alt=""/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,20,24&height=4" width="100%" alt=""/>
 
 ## Tech Stack
 
@@ -57,7 +55,7 @@ Supabase &nbsp;·&nbsp; Vercel
 
 > I am experimenting with Supabase and Vercel, but my main projects are built with Laravel and MySQL.
 
-<img src="assets/divider.gif" width="100%" alt=""/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,20,24&height=4" width="100%" alt=""/>
 
 ## MZ DevWorks
 
@@ -69,7 +67,7 @@ Supabase &nbsp;·&nbsp; Vercel
 
 Visit: [mzdevworks.netlify.app](https://mzdevworks.netlify.app/)
 
-<img src="assets/divider.gif" width="100%" alt=""/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,20,24&height=4" width="100%" alt=""/>
 
 ## GitHub Statistics
 
@@ -92,7 +90,7 @@ Visit: [mzdevworks.netlify.app](https://mzdevworks.netlify.app/)
 
 </div>
 
-<img src="assets/divider.gif" width="100%" alt=""/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,20,24&height=4" width="100%" alt=""/>
 
 ## Connect With Me
 
@@ -102,4 +100,4 @@ Visit: [mzdevworks.netlify.app](https://mzdevworks.netlify.app/)
 | Portfolio | [gizedin.netlify.app](https://gizedin.netlify.app/) |
 | MZ DevWorks | [mzdevworks.netlify.app](https://mzdevworks.netlify.app/) |
 
-<img src="assets/footer.gif" width="100%" alt="Thanks for visiting"/>
+<img src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=12,20,24&height=140&section=footer&text=Thanks%20for%20visiting&fontSize=26&fontColor=ffffff&animation=twinkling&fontAlignY=65" width="100%" alt="footer"/>
