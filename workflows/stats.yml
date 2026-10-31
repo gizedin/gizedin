@@ -1,0 +1,149 @@
+name: Update Contribution Statistics
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build statistics
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const login = context.repo.owner;
+            const now = new Date();
+            const iso = (d) => d.toISOString().slice(0, 10);
+            const pct = (a, b) => (b ? Math.round((a * 1000) / b) / 10 : 0);
+            const bar = (p) => {
+              const n = Math.max(0, Math.min(10, Math.round(p / 10)));
+              return '`' + '█'.repeat(n) + '░'.repeat(10 - n) + '`';
+            };
+            const addDays = (d, n) => new Date(d.getTime() + n * 86400000);
+
+            const me = await github.graphql(
+              `query($login:String!){ user(login:$login){ createdAt } }`,
+              { login }
+            );
+            const startYear = new Date(me.user.createdAt).getUTCFullYear();
+            const curYear = now.getUTCFullYear();
+
+            const days = {};
+            const yearTotals = {};
+            for (let y = startYear; y <= curYear; y++) {
+              const from = `${y}-01-01T00:00:00Z`;
+              const to = y === curYear ? now.toISOString() : `${y}-12-31T23:59:59Z`;
+              const r = await github.graphql(
+                `query($login:String!,$from:DateTime!,$to:DateTime!){
+                   user(login:$login){
+                     contributionsCollection(from:$from,to:$to){
+                       contributionCalendar{ weeks{ contributionDays{ date contributionCount } } }
+                     }
+                   }
+                 }`,
+                { login, from, to }
+              );
+              let total = 0;
+              for (const w of r.user.contributionsCollection.contributionCalendar.weeks) {
+                for (const d of w.contributionDays) {
+                  if (d.date.startsWith(String(y))) {
+                    days[d.date] = d.contributionCount;
+                    total += d.contributionCount;
+                  }
+                }
+              }
+              yearTotals[y] = total;
+            }
+
+            const sumRange = (start, end) => {
+              let total = 0, active = 0, elapsed = 0;
+              for (let d = start; d <= end; d = addDays(d, 1)) {
+                elapsed++;
+                const c = days[iso(d)] || 0;
+                total += c;
+                if (c > 0) active++;
+              }
+              return { total, active, elapsed };
+            };
+
+            const today = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
+            const allTotal = Object.values(yearTotals).reduce((a, b) => a + b, 0);
+            const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+            let out = '';
+
+            // By year
+            out += `### By Year (share of all-time contributions)\n\n| Year | Contributions | Share | Chart |\n| --- | ---: | ---: | --- |\n`;
+            for (let y = startYear; y <= curYear; y++) {
+              const p = pct(yearTotals[y], allTotal);
+              out += `| ${y} | ${yearTotals[y]} | ${p}% | ${bar(p)} |\n`;
+            }
+
+            // By month
+            out += `\n### By Month ${curYear} (share of this year)\n\n| Month | Contributions | Share | Chart |\n| --- | ---: | ---: | --- |\n`;
+            for (let m = 0; m <= now.getUTCMonth(); m++) {
+              const start = new Date(Date.UTC(curYear, m, 1));
+              const end = m === now.getUTCMonth() ? today : new Date(Date.UTC(curYear, m + 1, 0));
+              const s = sumRange(start, end);
+              const p = pct(s.total, yearTotals[curYear]);
+              out += `| ${monthNames[m]} | ${s.total} | ${p}% | ${bar(p)} |\n`;
+            }
+
+            // By week (last 8 weeks, Monday to Sunday)
+            const dow = (today.getUTCDay() + 6) % 7;
+            const thisMonday = addDays(today, -dow);
+            const weeks = [];
+            for (let i = 7; i >= 0; i--) {
+              const start = addDays(thisMonday, -7 * i);
+              const end = addDays(start, 6);
+              const s = sumRange(start, end > today ? today : end);
+              weeks.push({ start, end, total: s.total, current: i === 0 });
+            }
+            const weeksTotal = weeks.reduce((a, w) => a + w.total, 0);
+            out += `\n### By Week (last 8 weeks, share of the 8-week total)\n\n| Week | Contributions | Share | Chart |\n| --- | ---: | ---: | --- |\n`;
+            for (const w of weeks) {
+              const p = pct(w.total, weeksTotal);
+              out += `| ${iso(w.start)} to ${iso(w.end)}${w.current ? ' (current)' : ''} | ${w.total} | ${p}% | ${bar(p)} |\n`;
+            }
+
+            // Active days
+            const periods = [
+              ['This week', thisMonday],
+              ['This month', new Date(Date.UTC(curYear, now.getUTCMonth(), 1))],
+              ['This year', new Date(Date.UTC(curYear, 0, 1))],
+            ];
+            out += `\n### Active Days (days with at least one contribution)\n\n| Period | Active days | Activity | Chart |\n| --- | ---: | ---: | --- |\n`;
+            for (const [name, start] of periods) {
+              const s = sumRange(start, today);
+              const p = pct(s.active, s.elapsed);
+              out += `| ${name} | ${s.active} / ${s.elapsed} | ${p}% | ${bar(p)} |\n`;
+            }
+
+            out += `\n<sub>Updated automatically on ${now.toISOString().slice(0, 16).replace('T', ' ')} UTC</sub>`;
+
+            const block = `<!--STATS:START-->\n${out}\n<!--STATS:END-->`;
+            const readme = fs.readFileSync('README.md', 'utf8');
+            if (!readme.includes('<!--STATS:START-->')) {
+              core.setFailed('Markers <!--STATS:START--> and <!--STATS:END--> not found in README.md');
+              return;
+            }
+            fs.writeFileSync('README.md', readme.replace(/<!--STATS:START-->[\s\S]*<!--STATS:END-->/, () => block));
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --cached --quiet || (git commit -m "chore: update contribution statistics" && git push)

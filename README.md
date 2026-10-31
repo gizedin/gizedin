@@ -83,13 +83,11 @@ Visit: [mzdevworks.netlify.app](https://mzdevworks.netlify.app/)
 
 </div>
 
-## Push and Commit Activity
+## Push and Commit Statistics
 
-<div align="center">
-
-<img src="https://ghchart.rshah.org/58a6ff/gizedin" alt="Contribution graph" width="100%"/>
-
-</div>
+<!--STATS:START-->
+Statistics will appear here after the first workflow run.
+<!--STATS:END-->
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,20,24&height=4" width="100%" alt=""/>
 
