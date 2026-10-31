@@ -73,10 +73,11 @@ Visit: [mzdevworks.netlify.app](https://mzdevworks.netlify.app/)
 
 <div align="center">
 
-<img height="180" src="https://github-readme-stats.vercel.app/api?username=gizedin&show_icons=true&hide_border=true&theme=tokyonight&bg_color=0d1117" alt="GitHub stats"/>
-<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=gizedin&layout=compact&hide_border=true&theme=tokyonight&bg_color=0d1117" alt="Top languages"/>
+<img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Fgizedin&query=%24.public_repos&label=Public%20Repos&style=for-the-badge&logo=github&color=58a6ff" alt="Public repos" height="40"/>
+<img src="https://img.shields.io/github/followers/gizedin?label=Followers&style=for-the-badge&logo=github&color=bc8cff" alt="Followers" height="40"/>
+<img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Fgizedin&query=%24.following&label=Following&style=for-the-badge&logo=github&color=ff7eb6" alt="Following" height="40"/>
 
-<br/>
+<br/><br/>
 
 <img src="https://streak-stats.demolab.com?user=gizedin&theme=tokyonight&hide_border=true&background=0d1117" alt="Contribution streak"/>
 
@@ -86,7 +87,7 @@ Visit: [mzdevworks.netlify.app](https://mzdevworks.netlify.app/)
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=gizedin&theme=tokyo-night&hide_border=true&area=true&bg_color=0d1117&custom_title=Push%20and%20Commit%20Activity" alt="Activity graph" width="100%"/>
+<img src="https://ghchart.rshah.org/58a6ff/gizedin" alt="Contribution graph" width="100%"/>
 
 </div>
 
