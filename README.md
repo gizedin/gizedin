@@ -1,89 +1,100 @@
-<h1 align="center">Hi, I'm Gizedin Al Qorni Gunawan 👋</h1>
+<div align="center">
 
-<p align="center">
-  <b>Backend Developer</b> • Founder of <b>MZ DevWorks</b><br/>
-  Building websites, systems, and applications with Laravel & MySQL.
-</p>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=160&section=header&text=Gizedin%20Al%20Qorni%20Gunawan&fontSize=34&fontAlignY=40&animation=fadeIn" alt="header" width="100%"/>
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/gizedin-al-qorni-gunawan-27129b343">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>
-  <a href="https://gizedin.netlify.app/">
-    <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=netlify&logoColor=00C7B7" alt="Portfolio"/>
-  </a>
-  <a href="https://mzdevworks.netlify.app/">
-    <img src="https://img.shields.io/badge/MZ%20DevWorks-1F2937?style=for-the-badge&logo=netlify&logoColor=00C7B7" alt="MZ DevWorks"/>
-  </a>
-</p>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1200&color=2F81F7&center=true&vCenter=true&width=600&lines=Backend+Developer;PHP+%7C+Laravel+%7C+MySQL;Founder+of+MZ+DevWorks;Websites%2C+Systems+%26+Applications" alt="typing animation"/>
+
+<br/>
+
+[LinkedIn](https://www.linkedin.com/in/gizedin-al-qorni-gunawan-27129b343) &nbsp;|&nbsp; [Portfolio](https://gizedin.netlify.app/) &nbsp;|&nbsp; [MZ DevWorks](https://mzdevworks.netlify.app/)
+
+</div>
 
 ---
 
-## 👨‍💻 About Me
+## About Me
 
-- 🔧 I'm a **backend developer** focused on **PHP, Laravel, and MySQL**.
-- 🏢 I run **MZ DevWorks**, a business that creates **websites, systems, and applications** for clients.
-- 🎨 On the front end, I work with **Vanilla CSS, Bootstrap, Tailwind CSS, and React**.
-- 🌱 I'm currently exploring **Supabase** and **Vercel** as experiments, while building my projects with **Laravel and MySQL**.
-
----
-
-## 🚀 Tech Stack
-
-### ✅ 1. Skills I Have Mastered
-
-<p>
-  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP"/>
-  <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel"/>
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
-  <img src="https://img.shields.io/badge/Vanilla%20CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="Vanilla CSS"/>
-  <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"/>
-  <img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS"/>
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
-</p>
-
-### 📘 2. Basic Skills
-
-<p>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java"/>
-</p>
-
-### 🌱 3. Currently Learning
-
-<p>
-  <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase"/>
-  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel"/>
-</p>
-
-> 💡 I'm experimenting with Supabase and Vercel, but my main projects are built with Laravel and MySQL.
+- I am a **backend developer** focused on **PHP, Laravel, and MySQL**.
+- I run **MZ DevWorks**, a business that builds **websites, systems, and applications** for clients.
+- On the front end, I work with **Vanilla CSS, Bootstrap, Tailwind CSS, and React**.
+- I am currently exploring **Supabase** and **Vercel** as experiments, while my main projects are built with **Laravel and MySQL**.
 
 ---
 
-## 🏢 MZ DevWorks
+## Tech Stack
+
+**1. Skills I Have Mastered**
+
+PHP &nbsp;·&nbsp; Laravel &nbsp;·&nbsp; MySQL &nbsp;·&nbsp; Vanilla CSS &nbsp;·&nbsp; Bootstrap &nbsp;·&nbsp; Tailwind CSS &nbsp;·&nbsp; React
+
+**2. Basic Skills**
+
+HTML &nbsp;·&nbsp; CSS &nbsp;·&nbsp; JavaScript &nbsp;·&nbsp; Java
+
+**3. Currently Learning**
+
+Supabase &nbsp;·&nbsp; Vercel
+
+> I am experimenting with Supabase and Vercel, but my main projects are built with Laravel and MySQL.
+
+---
+
+## MZ DevWorks
 
 **MZ DevWorks** is my business focused on delivering:
 
-- 🌐 Website development
-- ⚙️ Custom system development
-- 📱 Application development
+- Website development
+- Custom system development
+- Application development
 
-👉 Visit: [mzdevworks.netlify.app](https://mzdevworks.netlify.app/)
+Visit: [mzdevworks.netlify.app](https://mzdevworks.netlify.app/)
 
 ---
 
-## 🔗 Connect With Me
+## GitHub Statistics
+
+<div align="center">
+
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=USERNAME&show_icons=false&hide_border=true&theme=transparent&count_private=true" alt="GitHub stats"/>
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=USERNAME&layout=compact&hide_border=true&theme=transparent" alt="Top languages"/>
+
+<img src="https://streak-stats.demolab.com?user=USERNAME&hide_border=true&theme=transparent" alt="Contribution streak"/>
+
+</div>
+
+## Push Activity
+
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=USERNAME&hide_border=true&custom_title=Push%20and%20Commit%20Activity&bg_color=00000000&color=2F81F7&line=2F81F7&point=2F81F7" alt="Activity graph" width="100%"/>
+
+</div>
+
+## Contribution Snake
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/USERNAME/USERNAME/output/github-snake-dark.svg"/>
+  <img alt="Contribution snake" src="https://raw.githubusercontent.com/USERNAME/USERNAME/output/github-snake.svg"/>
+</picture>
+
+</div>
+
+---
+
+## Connect With Me
 
 | Platform | Link |
 | --- | --- |
-| 💼 LinkedIn | [gizedin-al-qorni-gunawan](https://www.linkedin.com/in/gizedin-al-qorni-gunawan-27129b343) |
-| 🌍 Portfolio | [gizedin.netlify.app](https://gizedin.netlify.app/) |
-| 🏢 MZ DevWorks | [mzdevworks.netlify.app](https://mzdevworks.netlify.app/) |
+| LinkedIn | [gizedin-al-qorni-gunawan](https://www.linkedin.com/in/gizedin-al-qorni-gunawan-27129b343) |
+| Portfolio | [gizedin.netlify.app](https://gizedin.netlify.app/) |
+| MZ DevWorks | [mzdevworks.netlify.app](https://mzdevworks.netlify.app/) |
 
----
+<div align="center">
 
-<p align="center">
-  ⭐ Thanks for visiting my profile!
-</p>
+Thanks for visiting my profile.
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" alt="footer" width="100%"/>
+
+</div>
